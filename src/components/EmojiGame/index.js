@@ -27,26 +27,39 @@ class EmojiGame extends Component {
   }
 
   updateScore = uniqueId => {
-    const {emojiIdsList} = this.state
+    const {emojiIdsList, score} = this.state
     const {emojisList} = this.props
     if (emojiIdsList.includes(uniqueId) === true) {
       this.setState(prevState => ({
         isGamePlayed: !prevState.isGamePlayed,
-        gameResult: 'Loss',
+        emojiIdsList: [],
       }))
-    } else if (emojiIdsList.includes(uniqueId) === false) {
-      this.setState(prevState => ({
-        score: prevState.score + 1,
-        emojiIdsList: [...prevState.emojiIdsList, uniqueId],
-      }))
+    } else {
+      const updatedScore = score + 1
+      const updatedEmojiIdsList = [...emojiIdsList, uniqueId]
+      if (updatedScore === emojisList.length) {
+        this.setState(prevState => ({
+          score: updatedScore,
+          gameResult: 'Win',
+          isGamePlayed: !prevState.isGamePlayed,
+        }))
+      } else {
+        this.setState({
+          score: updatedScore,
+          emojiIdsList: updatedEmojiIdsList,
+        })
+      }
     }
   }
 
   playAgain = () => {
+    const {score, topScore} = this.state
+    const updatedTopScore = score > topScore ? score : topScore
     this.setState(prevState => ({
       isGamePlayed: !prevState.isGamePlayed,
       score: 0,
       emojiIdsList: [],
+      topScore: updatedTopScore,
     }))
   }
 
@@ -68,10 +81,9 @@ class EmojiGame extends Component {
   }
 
   getWinOrLoseComponent = () => {
-    const {score, gameResult, emojiIdsList} = this.state
+    const {score, gameResult} = this.state
     const {emojisList} = this.props
     const maxScore = emojisList.length
-    console.log(emojiIdsList)
     return (
       <WinOrLoseCard
         score={score}
@@ -86,7 +98,7 @@ class EmojiGame extends Component {
     const {score, topScore, isGamePlayed} = this.state
     return (
       <div>
-        <NavBar score={score} topScore={topScore} />
+        <NavBar score={score} topScore={topScore} isGamePlayed={isGamePlayed} />
         <div className="emojis-bg-container">
           {isGamePlayed ? this.getWinOrLoseComponent() : this.getEmojis()}
         </div>

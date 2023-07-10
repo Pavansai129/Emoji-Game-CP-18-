@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: row;
   margin-left: 50px;
+  margin-right: auto;
+  border: 1px solid blue;
 }
 .score-container {
   display: flex;
