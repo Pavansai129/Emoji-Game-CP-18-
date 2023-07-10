@@ -1,0 +1,21 @@
+/* Write your code here. */
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 10vh;
+  background-color: red;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+.score-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 50px;
+}
+.score {
+  margin-right: 20px;
+}
