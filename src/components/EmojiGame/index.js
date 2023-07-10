@@ -22,7 +22,7 @@ class EmojiGame extends Component {
     score: 0,
     topScore: 0,
     isGamePlayed: false,
-    gameResult: 'Loss',
+    gameResult: 'Lose',
     emojiIdsList: [],
   }
 

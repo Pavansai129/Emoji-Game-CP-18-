@@ -7,7 +7,7 @@ const NavBar = props => {
     isGamePlayed ? null : (
       <div className="score-container">
         <p className="score">Score: {score}</p>
-        <p className="score">TopScore: {topScore}</p>
+        <p className="score">Top Score: {topScore}</p>
       </div>
     )
   return (
@@ -17,7 +17,7 @@ const NavBar = props => {
           src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
           alt="emoji logo"
         />
-        <p>Emoji Game</p>
+        <h1>Emoji Game</h1>
       </div>
       {getNavbar()}
     </div>
