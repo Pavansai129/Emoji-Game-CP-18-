@@ -1,0 +1,48 @@
+Total:20
+20
+0
+Emoji Game tests
+
+20
+20
+0
+Page should consist of at least two HTML list items and the emojisList should be rendered using a unique key as a prop for each emoji card
+169 ms 
+When the user clicks the HTML button element with the text "Play Again" then the Top Score of the game should change if the user score is greater than the Top Score
+2117 ms 
+Page should consist of an HTML main heading element with "Emoji Game" as text content
+24 ms 
+Page should consist of an HTML image element with alt as "emoji logo" and src attribute value as the URL for emoji game logo
+108 ms 
+Page should consist of an HTML paragraph element with text content as "Score: 0" initially
+12 ms 
+Page should consist of an HTML paragraph element with text content as "Top Score: 0" initially
+12 ms 
+Page should consist of at least twelve HTML button elements each inside a HTML list item
+8 ms 
+Page should consist of at least twelve HTML image elements each inside a HTML button element with alt equal to the "emojiName" value and src equal to the "emojiUrl" value in emojisList provided
+1109 ms 
+When the user has won the game then the page should consist of an HTML main heading element with "You Won" as text content
+1155 ms 
+When the user has won the game then the page should consist of an HTML paragraph element with "Best Score" as text content
+1139 ms 
+When the user has won the game then the page should consist of an HTML paragraph element with "12/12" as text content
+1118 ms 
+When the user has won the game then the page should consist of an HTML button element with "Play Again" as text content
+1132 ms 
+When the user has won the game then the page should consist of an HTML image element with alt as "win or lose" and src attribute value as the URL for the won game image
+1126 ms 
+When the user has won the game then the page should not contain HTML paragraph elements with text content as "Score" and "Top Score"
+1125 ms 
+When the user clicks an HTML button element with the text "Play Again" after completing the game then the game should be started - with at least twelve emojis displayed
+1129 ms 
+When the user clicks any emoji twice then the page should consist of an HTML main heading element with "You Lose" as text content
+668 ms 
+When the user clicks an emoji twice then the page should consist of an HTML paragraph element with "Score" as text content
+646 ms 
+When the user clicks an emoji twice then the page should consist of an HTML button element with "Play Again" as text content
+656 ms 
+When the user clicks an emoji twice then the page should consist of an HTML image element with alt as "win or lose" and src attribute value as the URL for the lose game image
+662 ms 
+When the user has lost the game and clicks an HTML button element with the text "Play Again" after completing the game then the game should be started - with at least twelve emojis displayed
+693 ms 
