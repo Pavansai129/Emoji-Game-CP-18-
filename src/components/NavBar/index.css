@@ -2,16 +2,23 @@
 .navbar-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   min-height: 10vh;
-  background-color: red;
+  background-color: #9796f095;
+}
+.navbar-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
 }
 .logo-container {
   display: flex;
   flex-direction: row;
   margin-left: 50px;
   margin-right: auto;
-  border: 1px solid blue;
 }
 .score-container {
   display: flex;
